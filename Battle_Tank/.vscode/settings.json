@@ -1,0 +1,7 @@
+{
+	"files.exclude": {
+		"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/.vscode": true,
+		"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Content": true,
+		"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Intermediate": true
+	}
+}
