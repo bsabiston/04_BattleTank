@@ -16,6 +16,7 @@ void ATank::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));
 }
 
 // Called every frame
@@ -30,5 +31,10 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+void ATank::AimAt(FVector HitLocation)
+{
+	TankAimingComponent->AimAt(HitLocation);
 }
 

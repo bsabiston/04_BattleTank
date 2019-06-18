@@ -15,11 +15,17 @@ void ATankAIController::BeginPlay()
         UE_LOG(LogTemp, Warning, TEXT("Got AI Tank %s"), *(Tank->GetName()));
     }
 
-    ATank *PlayerTank = GetPlayerTank();
-    if (PlayerTank)
+}
+
+// Called every frame
+void ATankAIController::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+    if (GetPlayerTank())
     {
-        UE_LOG(LogTemp, Warning, TEXT("Got Player Tank %s"), *(PlayerTank->GetName()));
+        GetControlledTank()->AimAt(GetPlayerTank()->GetActorLocation());
     }
+   
 }
 
 ATank *ATankAIController::GetControlledTank() const
@@ -34,3 +40,4 @@ ATank *ATankAIController::GetPlayerTank() const
     ATank *Tank = Cast<ATank>(GetWorld()->GetFirstPlayerController()->GetPawn());
     return Tank;
 }
+
