@@ -1,3 +1,19 @@
 
 
-Battle_Tank/.vscode/ipch/
+.vscode/ipch/
+
+# Created by https://www.gitignore.io/api/visualstudiocode
+# Edit at https://www.gitignore.io/?templates=visualstudiocode
+
+### VisualStudioCode ###
+Battle_Tank/.vscode/*
+Battle_Tank/!.vscode/settings.json
+Battle_Tank/!.vscode/tasks.json
+Battle_Tank/!.vscode/launch.json
+Battle_Tank/!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+Battle_Tank/.history
+
+# End of https://www.gitignore.io/api/visualstudiocode
