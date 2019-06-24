@@ -1,0 +1,995 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Battle_Tank Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"Debug",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"Debug",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank Mac Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"Debug",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"DebugGame",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"DebugGame",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank Mac DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"DebugGame",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"Development",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"Development",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank Mac Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"Development",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"Shipping",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"Shipping",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank Mac Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"Shipping",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"Test",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"Test",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank Mac Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank Mac Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"Mac",
+				"Test",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"Debug",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"Debug",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank IOS Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"Debug",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"DebugGame",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"DebugGame",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank IOS DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"DebugGame",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"Development",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"Development",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank IOS Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"Development",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"Shipping",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"Shipping",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank IOS Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"Shipping",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"Test",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"Test",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank IOS Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank IOS Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"IOS",
+				"Test",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"Debug",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"Debug",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank HTML5 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"Debug",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"DebugGame",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"DebugGame",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank HTML5 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"DebugGame",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"Development",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"Development",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank HTML5 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"Development",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"Shipping",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"Shipping",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank HTML5 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"Shipping",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"Test",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"Test",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_Tank HTML5 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_Tank HTML5 Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_Tank",
+				"HTML5",
+				"Test",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_TankEditor Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_TankEditor",
+				"Mac",
+				"Debug",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_TankEditor Mac Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_TankEditor",
+				"Mac",
+				"Debug",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_TankEditor Mac Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_TankEditor Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_TankEditor",
+				"Mac",
+				"Debug",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_TankEditor Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_TankEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_TankEditor Mac DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_TankEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_TankEditor Mac DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_TankEditor Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_TankEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_TankEditor Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_TankEditor",
+				"Mac",
+				"Development",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_TankEditor Mac Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_TankEditor",
+				"Mac",
+				"Development",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Battle_TankEditor Mac Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		},
+		{
+			"label": "Battle_TankEditor Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Battle_TankEditor",
+				"Mac",
+				"Development",
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Volumes/Sulaco/UE_4.22"
+			}
+		}
+	]
+}

@@ -1,0 +1,104 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Battle_Tank (Debug)",
+			"request": "launch",
+			"preLaunchTask": "Battle_Tank Mac Debug Build",
+			"program": "/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Binaries/Mac/Battle_Tank-Mac-Debug.app/Contents/MacOS/Battle_Tank-Mac-Debug",
+			"args": [
+			],
+			"cwd": "/Volumes/Sulaco/UE_4.22",
+			"type": "lldb"
+		},
+		{
+			"name": "Battle_Tank (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "Battle_Tank Mac DebugGame Build",
+			"program": "/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Binaries/Mac/Battle_Tank-Mac-DebugGame.app/Contents/MacOS/Battle_Tank-Mac-DebugGame",
+			"args": [
+			],
+			"cwd": "/Volumes/Sulaco/UE_4.22",
+			"type": "lldb"
+		},
+		{
+			"name": "Battle_Tank (Development)",
+			"request": "launch",
+			"preLaunchTask": "Battle_Tank Mac Development Build",
+			"program": "/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Binaries/Mac/Battle_Tank.app/Contents/MacOS/Battle_Tank",
+			"args": [
+			],
+			"cwd": "/Volumes/Sulaco/UE_4.22",
+			"type": "lldb"
+		},
+		{
+			"name": "Battle_Tank (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "Battle_Tank Mac Shipping Build",
+			"program": "/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Binaries/Mac/Battle_Tank-Mac-Shipping.app/Contents/MacOS/Battle_Tank-Mac-Shipping",
+			"args": [
+			],
+			"cwd": "/Volumes/Sulaco/UE_4.22",
+			"type": "lldb"
+		},
+		{
+			"name": "Battle_Tank (Test)",
+			"request": "launch",
+			"preLaunchTask": "Battle_Tank Mac Test Build",
+			"program": "/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Binaries/Mac/Battle_Tank-Mac-Test.app/Contents/MacOS/Battle_Tank-Mac-Test",
+			"args": [
+			],
+			"cwd": "/Volumes/Sulaco/UE_4.22",
+			"type": "lldb"
+		},
+		{
+			"name": "Battle_TankEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "Battle_TankEditor Mac Debug Build",
+			"program": "/Volumes/Sulaco/UE_4.22/Engine/Binaries/Mac/UE4Editor-Mac-Debug.app/Contents/MacOS/UE4Editor-Mac-Debug",
+			"args": [
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject"
+			],
+			"cwd": "/Volumes/Sulaco/UE_4.22",
+			"type": "lldb"
+		},
+		{
+			"name": "Battle_TankEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "Battle_TankEditor Mac DebugGame Build",
+			"program": "/Volumes/Sulaco/UE_4.22/Engine/Binaries/Mac/UE4Editor.app/Contents/MacOS/UE4Editor",
+			"args": [
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject"
+			],
+			"cwd": "/Volumes/Sulaco/UE_4.22",
+			"type": "lldb"
+		},
+		{
+			"name": "Battle_TankEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "Battle_TankEditor Mac Development Build",
+			"program": "/Volumes/Sulaco/UE_4.22/Engine/Binaries/Mac/UE4Editor.app/Contents/MacOS/UE4Editor",
+			"args": [
+				"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject"
+			],
+			"cwd": "/Volumes/Sulaco/UE_4.22",
+			"type": "lldb"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "mono",
+			"request": "launch",
+			"program": "/Volumes/Sulaco/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe",
+			"console": "internalConsole",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=\"/Users/bob/Desktop/Unreal Course/04_BattleTank/Battle_Tank/Battle_Tank.uproject\"",
+				"-game",
+				"-engine"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"cwd": "/Volumes/Sulaco/UE_4.22"
+		}
+	]
+}
