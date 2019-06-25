@@ -31,6 +31,7 @@ public:
 
 protected:
 	UTankAimingComponent *TankAimingComponent = nullptr;
+	
 
 private:
 	// Sets default values for this pawn's properties
@@ -50,4 +51,5 @@ private:
 		TSubclassOf<AProjectile> ProjectileBlueprint; 
 
 	UTankBarrel *Barrel = nullptr;
+
 };
