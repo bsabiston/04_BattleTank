@@ -8,6 +8,7 @@
 
 class UTankBarrel;
 class UTankTurret;
+class UTankTrack;
 class AProjectile;
 class UTankAimingComponent;
 class UTankMovementComponent;
@@ -23,7 +24,7 @@ public:
 	void SetBarrelReference(UTankBarrel *BarrelToSet);
 
 	UFUNCTION(BlueprintCallable, Category = Setup)
-		void SetTurretReference(UTankTurret *TurretToSet);
+	void SetTurretReference(UTankTurret *TurretToSet);
 
 	void AimAt(FVector HitLocation);
 
@@ -57,7 +58,7 @@ private:
 		float ReloadTimeInSeconds = 3;
 
 	UTankBarrel *Barrel = nullptr;
-	
+
 	double LastFireTime = 0;
 
 };

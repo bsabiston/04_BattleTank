@@ -1,0 +1,196 @@
+﻿<Settings>
+  <Server Name="tpg-potw" />
+  <BuildGroups>
+    <Group Name="PC and GameContent">
+      <BuildType Name="Editor" />
+      <BuildType Name="Standalone" />
+      <BuildType Name="GameContent" />
+    </Group>
+    <Group Name="PC Exes Only">
+      <BuildType Name="Editor" />
+      <BuildType Name="Standalone" />
+    </Group>
+    <Group Name="GameContent Project">
+      <BuildType Name="GameContent" />
+    </Group>
+    <Group Name="Compile Material Shaders">
+      <BuildType Name="MaterialShaders" />
+    </Group>
+    <Group Name="Compile Compute Shaders">
+      <BuildType Name="ComputeShaders" />
+    </Group>
+    <Group Name="Compile All Shaders">
+      <BuildType Name="MaterialShaders" />
+      <BuildType Name="ComputeShaders" />
+    </Group>
+    <Group Name="PC Uberbuild">
+      <BuildType Name="PCUberbuild" />
+      <BuildType Name="CopyRiftToNetwork" />
+    </Group>
+    <Group Name="Android Uberbuild">
+      <BuildType Name="UpdateAndroidManifest" />
+      <BuildType Name="AndroidUberbuild" />
+      <BuildType Name="CopyAndroidToNetwork" />
+    </Group>
+    <Group Name="PC and Android Uberbuild">
+      <BuildType Name="PCUberbuild" />
+      <BuildType Name="CopyRiftToNetwork" />
+      <BuildType Name="UpdateAndroidManifest" />
+      <BuildType Name="AndroidUberbuild" />
+      <BuildType Name="CopyAndroidToNetwork" />
+    </Group>
+    <Group Name="PC Uberbuild (Upload)">
+      <BuildType Name="PCUberbuild" />
+      <BuildType Name="CopyRiftToNetwork" />
+      <BuildType Name="UploadRiftBuild" />
+    </Group>
+    <Group Name="Android Uberbuild (Upload)">
+      <BuildType Name="UpdateAndroidManifest" />
+      <BuildType Name="AndroidUberbuild" />
+      <BuildType Name="CopyAndroidToNetwork" />
+      <BuildType Name="UploadAndroidBuild" />
+    </Group>
+    <Group Name="PC and Android Uberbuild (Upload)">
+      <BuildType Name="PCUberbuild" />
+      <BuildType Name="CopyRiftToNetwork" />
+      <BuildType Name="UpdateAndroidManifest" />
+      <BuildType Name="AndroidUberbuild" />
+      <BuildType Name="CopyAndroidToNetwork" />
+      <BuildType Name="UploadAndroidBuild" />
+      <BuildType Name="UploadRiftBuild" />
+    </Group>
+    <Group Name="Android Manifest">
+      <BuildType Name="UpdateAndroidManifest" />
+    </Group>
+    <Group Name="Nightly">
+      <BuildType Name="GameContent" />
+      <BuildType Name="PCUberbuild" />
+      <BuildType Name="CopyRiftToNetwork" />
+      <BuildType Name="UpdateAndroidManifest" />
+      <BuildType Name="AndroidUberbuild" />
+      <BuildType Name="CopyAndroidToNetwork" />
+      <BuildType Name="UploadAndroidBuild" />
+      <BuildType Name="UploadRiftBuild" />
+    </Group>
+    <!--<Group Name="Test">
+      <BuildType Name="Test" />
+    </Group>-->
+  </BuildGroups>
+  <BuildTypes>
+    <BuildType Name="Editor" Config="Release" Platform="x64">
+      <OutputFolder Name="%GAME_ENGINE_APP_PATH%\bin\x64\Editor" />
+      <OutputFiles>
+        <File SourceName="%GAME_ENGINE_PATH%\Internal\obj\EngineLib\x64\Release\EngineLib.pdb" TargetName="EngineLib.pdb" />
+        <File SourceName="%GAME_ENGINE_PATH%\Internal\obj\Editor\x64\Release\Editor.exe" TargetName="Editor.exe" />
+        <File SourceName="%GAME_ENGINE_PATH%\Internal\obj\Editor\x64\Release\EditorControls.dll" TargetName="EditorControls.dll" />
+        <File SourceName="%GAME_ENGINE_PATH%\Internal\obj\Editor\x64\Release\WeifenLuo.WinFormsUI.Docking.dll" TargetName="WeifenLuo.WinFormsUI.Docking.dll" />
+        <File SourceName="%GAME_ENGINE_PATH%\OpenSource\XPTable\bin\Release\XPTable.dll" TargetName="XPTable.dll" />
+      </OutputFiles>
+    </BuildType>
+    <BuildType Name="Standalone" Config="ReleaseNoTools" Platform="x64">
+      <OutputFolder Name="%GAME_ENGINE_APP_PATH%\bin\x64\Standalone" />
+      <OutputFiles>
+        <File SourceName="%GAME_ENGINE_APP_PATH%\obj\x64\ReleaseNoTools\POTW.exe" TargetName="POTW.exe" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\obj\x64\ReleaseNoTools\POTW.pdb" TargetName="POTW.pdb" />
+        <File SourceName="%GAME_ENGINE_PATH%\Internal\obj\EngineLib\x64\ReleaseNoTools\EngineLib.pdb" TargetName="EngineLib.pdb" />
+      </OutputFiles>
+    </BuildType>
+    <BuildType Name="GameContent" ExternalTool="%GAME_ENGINE_PATH%\Tools\UpdateGameContentProject.exe" Arguments="">
+      <OutputFolder Name="%GAME_ENGINE_APP_PATH%" />
+      <OutputFiles>
+        <File SourceName="%GAME_ENGINE_APP_PATH%\GameContent.vcxproj" TargetName="GameContent.vcxproj" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\GameContent.vcxproj.filters" TargetName="GameContent.vcxproj.filters" />
+      </OutputFiles>
+    </BuildType>
+    <BuildType Name="MaterialShaders" ExternalTool="%GAME_ENGINE_APP_PATH%\content\libraryshared\shadersnew\hlsl\compute\_CompileEditorAll.bat" Arguments="">
+      <OutputFolder Name="%GAME_ENGINE_APP_PATH%\content\library\shadersnew\compiled" LockWholeFolder="1" />
+      <OutputFiles>
+      </OutputFiles>
+    </BuildType>
+    <BuildType Name="ComputeShaders" ExternalTool="%GAME_ENGINE_APP_PATH%\content\libraryshared\shadersnew\hlsl\compute\_CompileComputeAll.bat" Arguments="">
+      <OutputFolder Name="%GAME_ENGINE_APP_PATH%\content\libraryshared\shadersnew\compiled\compute" LockWholeFolder="1" />
+      <OutputFiles>
+      </OutputFiles>
+    </BuildType>
+    <BuildType Name="PCUberbuild" ExternalTool="%GAME_ENGINE_PATH%\Tools\BuildSubmission\_BuildPCMaster.bat" Arguments="nopause" CreateWindow="1">
+      <OutputFolder Name="%GAME_ENGINE_APP_PATH%\PCSubmission" />
+      <OutputFiles>
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\AmusementPark.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\Beach.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\Casino.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\English.pck" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\Factory.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\Global.pck" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\language_english.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\loadonly.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\MainMenu.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\NeonStreets.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\NeonStreets_BreakTime.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\Office.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\POTW.exe" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\resident.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\root_level.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\settings.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\TheBar.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\TheBar_BreakTime.upr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\PCSubmission\Tutorial.upr" TargetName="" />
+      </OutputFiles>
+    </BuildType>
+    <BuildType Name="AndroidUberbuild" ExternalTool="%GAME_ENGINE_PATH%\Tools\BuildSubmission\_BuildAndroidMaster.bat" Arguments="nopause" CreateWindow="1">
+      <OutputFolder Name="%GAME_ENGINE_APP_PATH%\AndroidSubmission" />
+      <OutputFiles>
+        <File SourceName="%GAME_ENGINE_APP_PATH%\AndroidSubmission\POTW_App.apk" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\AndroidSubmission\Debug\POTW_App.apk" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\AmusementPark.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\Beach.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\Casino.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\English.pck" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\Factory.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\Global.pck" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\language_english.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\loadonly.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\MainMenu.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\NeonStreets.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\NeonStreets_BreakTime.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\Office.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\resident.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\root_level.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\settings.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\TheBar.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\TheBar_BreakTime.apr" TargetName="" />
+        <File SourceName="%GAME_ENGINE_APP_PATH%\converted_ANDROID\Tutorial.apr" TargetName="" />
+      </OutputFiles>
+    </BuildType>
+    <BuildType Name="UpdateAndroidManifest" ExternalTool="%GAME_ENGINE_PATH%\Tools\UpdateAndroidManifest.bat" Arguments="%GAME_ENGINE_APP_PATH%\GameAndroid\GameAndroid\GameAndroid.Packaging\AndroidManifest.xml">
+      <OutputFolder Name="%GAME_ENGINE_APP_PATH%\GameAndroid\GameAndroid\GameAndroid.Packaging" LockWholeFolder="1" />
+      <OutputFiles>
+      </OutputFiles>
+    </BuildType>
+    <BuildType Name="UploadAndroidBuild" ExternalTool="%GAME_ENGINE_PATH%\Tools\OculusTools\___BuildinatorUploadPOTWQuestBuild.bat" Arguments="" CreateWindow="1">
+      <OutputFolder Name="%GAME_ENGINE_PATH%\Tools\OculusTools" />
+      <OutputFiles>
+      </OutputFiles>
+    </BuildType>
+    <BuildType Name="UploadRiftBuild" ExternalTool="%GAME_ENGINE_PATH%\Tools\OculusTools\___BuildinatorUploadPOTWRiftBuild.bat" Arguments="" CreateWindow="1">
+      <OutputFolder Name="%GAME_ENGINE_PATH%\Tools\OculusTools" />
+      <OutputFiles>
+      </OutputFiles>
+    </BuildType>
+    <BuildType Name="CopyRiftToNetwork" ExternalTool="%GAME_ENGINE_PATH%\Tools\BuildSubmission\CopyPCBuildToNetwork.bat" Arguments="">
+      <OutputFolder Name="%GAME_ENGINE_APP_PATH%\PCSubmissionZipped" />
+      <OutputFiles>
+      </OutputFiles>
+    </BuildType>
+    <BuildType Name="CopyAndroidToNetwork" ExternalTool="%GAME_ENGINE_PATH%\Tools\BuildSubmission\CopyAndroidBuildToNetwork.bat" Arguments="">
+      <OutputFolder Name="%GAME_ENGINE_APP_PATH%\AndroidSubmission" />
+      <OutputFiles>
+      </OutputFiles>
+    </BuildType>
+  </BuildTypes>
+  <ErrorFromEmail Name="Cookie Monster" Address="autobots@twistedpixelgames.com" Password="glmveotvfecghlsw" />
+  <ErrorToEmail Name="Build Errors" Address="_builderrors@twistedpixelgames.com" />
+  <ErrorAttachFiles>
+    <File Name="_BuildProcessOutput.txt" />
+    <File Name="_BuildProcessErrors.txt" />
+  </ErrorAttachFiles>
+</Settings>
