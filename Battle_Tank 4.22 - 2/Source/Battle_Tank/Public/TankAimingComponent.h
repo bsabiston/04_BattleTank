@@ -45,13 +45,18 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void Fire();
 private:
-	void MoveBarrelTowards(FVector AimDirection);
+	void BeginPlay() override;
+	void MoveBarrelTowards(FVector AimDir);
+	bool IsBarrelMoving();
+
+	void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
 
 	UPROPERTY(EditDefaultsOnly, Category = Firing)
 		float LaunchSpeed = 4000;
 
 	UTankBarrel *Barrel = nullptr;
 	UTankTurret *Turret = nullptr;
+	FVector AimDirection = FVector(0);
 
 	UPROPERTY(EditDefaultsOnly, Category = Setup)
 		TSubclassOf<AProjectile> ProjectileBlueprint;
