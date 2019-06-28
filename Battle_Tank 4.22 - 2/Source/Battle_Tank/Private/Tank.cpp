@@ -11,14 +11,20 @@ ATank::ATank()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
-	UE_LOG(LogTemp, Warning, TEXT("TNK: Construct C++"));
 }
 
 void ATank::BeginPlay()
 {
-	UE_LOG(LogTemp, Warning, TEXT("TNK: Begin Play! C++"));
-	Super::BeginPlay();
 	
+	Super::BeginPlay();
+	TankAimingComponent = FindComponentByClass<UTankAimingComponent>();
+}
+
+void ATank::AimAt(FVector HitLocation)
+{
+	if (!ensure(TankAimingComponent)) return;
+	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
+	UE_LOG(LogTemp, Warning, TEXT("I'm here!"));
 }
 
 void ATank::Fire()
@@ -39,9 +45,4 @@ void ATank::Fire()
 	}
 }
 
-void ATank::AimAt(FVector HitLocation)
-{
-	if (!ensure(TankAimingComponent)) return;
-	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
-}
 
