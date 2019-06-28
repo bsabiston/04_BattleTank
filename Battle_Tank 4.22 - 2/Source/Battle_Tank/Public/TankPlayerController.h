@@ -8,7 +8,6 @@
 
 class ATank;
 class UTankAimingComponent;
-
 /**
  * 
  */
@@ -19,8 +18,6 @@ class BATTLE_TANK_API ATankPlayerController : public APlayerController
 
 
 	protected:
-	UFUNCTION(BlueprintCallable, Category = "Setup")
-		ATank *GetControlledTank() const;
 
 	UFUNCTION(BlueprintImplementableEvent, Category = Setup)
 		void FoundAimingComponent(UTankAimingComponent * AimingComRef);

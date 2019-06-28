@@ -10,6 +10,7 @@
 
 class UTankBarrel;
 class UTankTurret;
+class AProjectile;
 
 // Enum for aiming state
 UENUM()
@@ -39,11 +40,24 @@ public:
 	void SetBarrelReference(UTankBarrel *BarrelToSet);
 	void SetTurretReference(UTankTurret *TurretToSet);
 
-	void AimAt(FVector HitLocation, float LaunchSpeed);
+	void AimAt(FVector HitLocation);
 
+	UFUNCTION(BlueprintCallable)
+		void Fire();
 private:
-	
+	void MoveBarrelTowards(FVector AimDirection);
+
+	UPROPERTY(EditDefaultsOnly, Category = Firing)
+		float LaunchSpeed = 4000;
+
 	UTankBarrel *Barrel = nullptr;
 	UTankTurret *Turret = nullptr;
-	void MoveBarrelTowards(FVector AimDirection);
+
+	UPROPERTY(EditDefaultsOnly, Category = Setup)
+		TSubclassOf<AProjectile> ProjectileBlueprint;
+
+	UPROPERTY(EditDefaultsOnly, Category = Firing)
+		float ReloadTimeInSeconds = 3;
+
+	double LastFireTime = 0;
 };
