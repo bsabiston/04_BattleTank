@@ -18,7 +18,8 @@ enum class EFiringStatus : uint8
 {
 	Reloading,
 	Aiming,
-	Locked
+	Locked,
+	OutOfAmmo
 };
 
 
@@ -41,9 +42,14 @@ public:
 	void SetTurretReference(UTankTurret *TurretToSet);
 
 	void AimAt(FVector HitLocation);
+	EFiringStatus GetFiringStatus() const;
 
 	UFUNCTION(BlueprintCallable)
 		void Fire();
+
+	UFUNCTION(BlueprintCallable, Category = Firing)
+	int GetRoundsLeft() const;
+
 private:
 	void BeginPlay() override;
 	void MoveBarrelTowards(FVector AimDir);
@@ -65,4 +71,5 @@ private:
 		float ReloadTimeInSeconds = 3;
 
 	double LastFireTime = 0;
+	int RoundsLeft = 3;
 };

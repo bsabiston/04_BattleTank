@@ -9,6 +9,7 @@ void ATankAIController::BeginPlay()
     Super::BeginPlay();
 }
 
+
 // Called every frame
 void ATankAIController::Tick(float DeltaTime)
 {
@@ -25,6 +26,9 @@ void ATankAIController::Tick(float DeltaTime)
 	AimingComponent->AimAt(PlayerTank->GetActorLocation());
 
 	// Fire if ready
-	AimingComponent->Fire();
+	if (AimingComponent->GetFiringStatus() == EFiringStatus::Locked)
+	{
+		AimingComponent->Fire();
+	}
 
 }
